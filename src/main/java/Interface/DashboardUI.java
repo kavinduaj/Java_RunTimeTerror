@@ -167,7 +167,7 @@ public class DashboardUI extends javax.swing.JFrame {
         );
         Panel1Layout.setVerticalGroup(
             Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 45, Short.MAX_VALUE)
+            .addGap(0, 46, Short.MAX_VALUE)
             .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Panel1Layout.createSequentialGroup()
                     .addGap(12, 12, 12)
@@ -261,7 +261,7 @@ public class DashboardUI extends javax.swing.JFrame {
             .addGroup(Panel5Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel5)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
         Panel5Layout.setVerticalGroup(
             Panel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
