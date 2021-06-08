@@ -101,6 +101,9 @@ public class DashboardUI extends javax.swing.JFrame {
         Menu2.setText("Order Instruments");
         Menu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu2MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 Menu2MouseEntered(evt);
             }
@@ -462,6 +465,14 @@ public class DashboardUI extends javax.swing.JFrame {
     private void Menu1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu1MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_Menu1MouseExited
+
+    private void Menu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu2MouseClicked
+        
+        OrderInstruments OI = new OrderInstruments ();
+        jDesktop.removeAll();
+        jDesktop.add(OI).setVisible(true);
+        
+    }//GEN-LAST:event_Menu2MouseClicked
 
     /**
      * @param args the command line arguments
