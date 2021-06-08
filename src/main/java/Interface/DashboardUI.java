@@ -2,19 +2,21 @@
 
 package Interface;
 
-import Model.Home;
 import java.awt.Color;
+import Interface.UserUI;
+import Model.User;
+import java.io.*;
 /**
  *
  * @author briananjune
  */
 public class DashboardUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DashboardUI
-     */
+    public String ad = "admin";
+    public String cu = "customer";
+    
     Color DefaultColor, 
-
+    
     /**
      * Creates new form DashboardUI
      */
@@ -34,8 +36,22 @@ public class DashboardUI extends javax.swing.JFrame {
         Panel5.setBackground(DefaultColor);
         Panel6.setBackground(DefaultColor);
         Panel7.setBackground(DefaultColor);
+        
+        
     }
-
+        public void ButtonA()
+        {
+            Menu1.setEnabled(false);
+            Menu2.setEnabled(false);
+            jLabel3.setEnabled(false);
+            jLabel4.setEnabled(false);
+        }
+        public void ButtonB()
+        {
+            jLabel5.setEnabled(false);
+            jLabel6.setEnabled(false);
+            jLabel7.setEnabled(false);
+        }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -85,6 +101,9 @@ public class DashboardUI extends javax.swing.JFrame {
         Menu2.setText("Order Instruments");
         Menu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Menu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Menu2MouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 Menu2MouseEntered(evt);
             }
@@ -182,7 +201,7 @@ public class DashboardUI extends javax.swing.JFrame {
         Panel3Layout.setHorizontalGroup(
             Panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel3Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -379,6 +398,7 @@ public class DashboardUI extends javax.swing.JFrame {
     }//GEN-LAST:event_Panel1MouseClicked
 
     private void Menu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu1MouseClicked
+        
         Home m1 = new Home ();
         jDesktop.removeAll();
         jDesktop.add(m1).setVisible(true);
@@ -446,6 +466,14 @@ public class DashboardUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Menu1MouseExited
 
+    private void Menu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu2MouseClicked
+        
+        OrderInstruments OI = new OrderInstruments ();
+        jDesktop.removeAll();
+        jDesktop.add(OI).setVisible(true);
+        
+    }//GEN-LAST:event_Menu2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -473,7 +501,7 @@ public class DashboardUI extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
+            
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
