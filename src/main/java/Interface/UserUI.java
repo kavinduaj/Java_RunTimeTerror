@@ -64,27 +64,27 @@ public class UserUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(580, 300));
         getContentPane().setLayout(null);
         getContentPane().add(jUsername);
-        jUsername.setBounds(175, 101, 299, 26);
+        jUsername.setBounds(220, 100, 299, 26);
         getContentPane().add(jpassword);
-        jpassword.setBounds(175, 139, 299, 26);
+        jpassword.setBounds(220, 140, 299, 26);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Login");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(251, 22, 120, 22);
+        jLabel1.setBounds(280, 20, 120, 22);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(73, 106, 80, 17);
+        jLabel2.setBounds(120, 110, 80, 17);
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(71, 144, 80, 17);
+        jLabel3.setBounds(120, 150, 80, 17);
 
         jButton1.setText("Sign In");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,12 +93,12 @@ public class UserUI extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(253, 221, 87, 29);
+        jButton1.setBounds(300, 220, 87, 29);
 
         jLabel4.setIcon(new javax.swing.ImageIcon("/Users/briananjune/Downloads/New Project.png")); // NOI18N
         jLabel4.setPreferredSize(new java.awt.Dimension(750, 300));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(5, 6, 580, 280);
+        jLabel4.setBounds(5, 6, 690, 280);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
