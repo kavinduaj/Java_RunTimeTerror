@@ -56,35 +56,36 @@ public class UserUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        LOGO = new javax.swing.JLabel();
+        BackGround = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(580, 300));
+        setPreferredSize(new java.awt.Dimension(750, 300));
         setResizable(false);
-        setSize(new java.awt.Dimension(580, 300));
+        setSize(new java.awt.Dimension(750, 300));
         getContentPane().setLayout(null);
         getContentPane().add(jUsername);
-        jUsername.setBounds(220, 100, 299, 26);
+        jUsername.setBounds(250, 120, 300, 30);
         getContentPane().add(jpassword);
-        jpassword.setBounds(220, 140, 299, 26);
+        jpassword.setBounds(250, 160, 300, 30);
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Login");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(280, 20, 120, 22);
+        jLabel1.setBounds(340, 90, 100, 24);
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(120, 110, 80, 17);
+        jLabel2.setBounds(150, 120, 80, 19);
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(120, 150, 80, 17);
+        jLabel3.setBounds(150, 160, 80, 19);
 
         jButton1.setText("Sign In");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,13 +93,24 @@ public class UserUI extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton1KeyPressed(evt);
+            }
+        });
         getContentPane().add(jButton1);
-        jButton1.setBounds(300, 220, 87, 29);
+        jButton1.setBounds(360, 200, 70, 23);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/briananjune/Downloads/New Project.png")); // NOI18N
-        jLabel4.setPreferredSize(new java.awt.Dimension(750, 300));
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(5, 6, 690, 280);
+        LOGO.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\LOGO\\Logos\\LOGO_wBackground.png")); // NOI18N
+        getContentPane().add(LOGO);
+        LOGO.setBounds(340, 10, 100, 80);
+
+        BackGround.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\Login_Image.jpg")); // NOI18N
+        BackGround.setMaximumSize(new java.awt.Dimension(750, 300));
+        BackGround.setMinimumSize(new java.awt.Dimension(750, 300));
+        BackGround.setPreferredSize(new java.awt.Dimension(750, 300));
+        getContentPane().add(BackGround);
+        BackGround.setBounds(0, 0, 750, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -134,6 +146,10 @@ public class UserUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Incorrect Values", "Failed", 1);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1KeyPressed
 
     /**
      * @param args the command line arguments
@@ -171,11 +187,12 @@ public class UserUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BackGround;
+    private javax.swing.JLabel LOGO;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jUsername;
     private javax.swing.JTextField jpassword;
     // End of variables declaration//GEN-END:variables

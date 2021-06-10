@@ -9,12 +9,12 @@ package Interface;
  *
  * @author User
  */
-public class OrderInstruments extends javax.swing.JInternalFrame {
+public class RequestRepairJob extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form OrderInstruments
+     * Creates new form RequestRepairJob
      */
-    public OrderInstruments() {
+    public RequestRepairJob() {
         initComponents();
     }
 
@@ -33,6 +33,8 @@ public class OrderInstruments extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(540, 434));
+
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setPreferredSize(new java.awt.Dimension(540, 434));
 
@@ -46,10 +48,10 @@ public class OrderInstruments extends javax.swing.JInternalFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Request Repair Job");
+        jLabel7.setText("Order Instruments");
         jPanel8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\shopping-search (2).png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\message-arrow-right (2).png")); // NOI18N
         jPanel8.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
