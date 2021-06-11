@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Interface;
 
-/**
- *
- * @author User
- */
+import java.awt.Color;
+
 public class DBCustomerUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DBCustomerUI
-     */
+    Color DefaultColor,ClickedColor,HoverColor;
     public DBCustomerUI() {
         initComponents();
+        DefaultColor=new Color(240,240,240);
+        ClickedColor=new Color(0,204,204);
+        HoverColor=new Color(204,255,255);
+        
+        //Set default color to pan on run time
+        CHome.setBackground(DefaultColor);
+        COrderIns.setBackground(DefaultColor);
+        COrderAcc.setBackground(DefaultColor);
+        CReqRepairJob.setBackground(DefaultColor);
     }
 
     /**
@@ -29,84 +29,136 @@ public class DBCustomerUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        COrderIns = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        COrderAcc = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        CReqRepairJob = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        CHome = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        StatusBar = new javax.swing.JPanel();
+        MusicMartTxt = new javax.swing.JLabel();
+        MenuName = new javax.swing.JLabel();
+        jDesktopPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(900, 540));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setPreferredSize(new java.awt.Dimension(210, 540));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel5.setPreferredSize(new java.awt.Dimension(240, 48));
+        COrderIns.setPreferredSize(new java.awt.Dimension(240, 48));
+        COrderIns.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                COrderInsMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                COrderInsMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                COrderInsMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                COrderInsMousePressed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\shopping-search (1).png")); // NOI18N
         jLabel2.setText("Order Instruments");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout COrderInsLayout = new javax.swing.GroupLayout(COrderIns);
+        COrderIns.setLayout(COrderInsLayout);
+        COrderInsLayout.setHorizontalGroup(
+            COrderInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(COrderInsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        COrderInsLayout.setVerticalGroup(
+            COrderInsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
         );
 
-        jPanel6.setPreferredSize(new java.awt.Dimension(240, 48));
+        jPanel2.add(COrderIns, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 197, 240, -1));
+
+        COrderAcc.setPreferredSize(new java.awt.Dimension(240, 48));
+        COrderAcc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                COrderAccMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                COrderAccMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                COrderAccMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                COrderAccMousePressed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\feature-search (1).png")); // NOI18N
         jLabel3.setText("Order Accerssories");
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
+        javax.swing.GroupLayout COrderAccLayout = new javax.swing.GroupLayout(COrderAcc);
+        COrderAcc.setLayout(COrderAccLayout);
+        COrderAccLayout.setHorizontalGroup(
+            COrderAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(COrderAccLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        COrderAccLayout.setVerticalGroup(
+            COrderAccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
         );
+
+        jPanel2.add(COrderAcc, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 263, 240, -1));
+
+        CReqRepairJob.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CReqRepairJobMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CReqRepairJobMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CReqRepairJobMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                CReqRepairJobMousePressed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\message-arrow-right (1).png")); // NOI18N
         jLabel4.setText("Request Repair Job");
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout CReqRepairJobLayout = new javax.swing.GroupLayout(CReqRepairJob);
+        CReqRepairJob.setLayout(CReqRepairJobLayout);
+        CReqRepairJobLayout.setHorizontalGroup(
+            CReqRepairJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CReqRepairJobLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
                 .addContainerGap(63, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        CReqRepairJobLayout.setVerticalGroup(
+            CReqRepairJobLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
         );
+
+        jPanel2.add(CReqRepairJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 329, 240, -1));
 
         jPanel4.setPreferredSize(new java.awt.Dimension(171, 100));
 
@@ -128,114 +180,87 @@ public class DBCustomerUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel9.setPreferredSize(new java.awt.Dimension(240, 48));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, -1));
+
+        CHome.setPreferredSize(new java.awt.Dimension(240, 48));
+        CHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CHomeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CHomeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CHomeMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                CHomeMousePressed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\home (1).png")); // NOI18N
         jLabel6.setText("Home");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout CHomeLayout = new javax.swing.GroupLayout(CHome);
+        CHome.setLayout(CHomeLayout);
+        CHomeLayout.setHorizontalGroup(
+            CHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CHomeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        CHomeLayout.setVerticalGroup(
+            CHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel2.add(CHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 131, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 540));
+
+        StatusBar.setBackground(new java.awt.Color(0, 204, 204));
+
+        MusicMartTxt.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        MusicMartTxt.setForeground(new java.awt.Color(255, 255, 255));
+        MusicMartTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MusicMartTxt.setText("Music Mart");
+
+        MenuName.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        MenuName.setForeground(new java.awt.Color(255, 255, 255));
+        MenuName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MenuName.setText("Customer");
+
+        javax.swing.GroupLayout StatusBarLayout = new javax.swing.GroupLayout(StatusBar);
+        StatusBar.setLayout(StatusBarLayout);
+        StatusBarLayout.setHorizontalGroup(
+            StatusBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StatusBarLayout.createSequentialGroup()
+                .addContainerGap(110, Short.MAX_VALUE)
+                .addGroup(StatusBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(StatusBarLayout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(MusicMartTxt))
+                    .addComponent(MenuName, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(107, 107, 107))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(68, 68, 68)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(101, Short.MAX_VALUE))
-        );
-
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel3.setPreferredSize(new java.awt.Dimension(540, 434));
-
-        jPanel10.setBackground(new java.awt.Color(0, 204, 204));
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Music Mart");
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Customer Home");
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(246, 246, 246))
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(196, 196, 196)
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel5)
+        StatusBarLayout.setVerticalGroup(
+            StatusBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, StatusBarLayout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(MusicMartTxt)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addComponent(MenuName)
+                .addGap(25, 25, 25))
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jPanel1.add(StatusBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 660, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
-        );
+        jDesktopPanel.setBackground(new java.awt.Color(204, 204, 204));
+        jDesktopPanel.setPreferredSize(new java.awt.Dimension(660, 440));
+        jDesktopPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jDesktopPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 660, 440));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -250,6 +275,114 @@ public class DBCustomerUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CHomeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CHomeMousePressed
+        // TODO add your handling code here:
+        CHome.setBackground(ClickedColor);
+        COrderIns.setBackground(DefaultColor);
+        COrderAcc.setBackground(DefaultColor);
+        CReqRepairJob.setBackground(DefaultColor);
+        
+        MenuName.setText("Home");
+    }//GEN-LAST:event_CHomeMousePressed
+
+    private void COrderInsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderInsMousePressed
+        // TODO add your handling code here:
+        CHome.setBackground(DefaultColor);
+        COrderIns.setBackground(ClickedColor);
+        COrderAcc.setBackground(DefaultColor);
+        CReqRepairJob.setBackground(DefaultColor);
+        
+        MenuName.setText("Order Instruments");
+    }//GEN-LAST:event_COrderInsMousePressed
+
+    private void COrderAccMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderAccMousePressed
+        // TODO add your handling code here:
+        CHome.setBackground(DefaultColor);
+        COrderIns.setBackground(DefaultColor);
+        COrderAcc.setBackground(ClickedColor);
+        CReqRepairJob.setBackground(DefaultColor);
+        
+        MenuName.setText("Order Accersories");
+    }//GEN-LAST:event_COrderAccMousePressed
+
+    private void CReqRepairJobMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CReqRepairJobMousePressed
+        // TODO add your handling code here:
+        CHome.setBackground(DefaultColor);
+        COrderIns.setBackground(DefaultColor);
+        COrderAcc.setBackground(DefaultColor);
+        CReqRepairJob.setBackground(ClickedColor);
+        
+        MenuName.setText("Request Repair Job");
+    }//GEN-LAST:event_CReqRepairJobMousePressed
+
+    private void CHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CHomeMouseClicked
+        // TODO add your handling code here:
+        CustomerHome cu1 = new CustomerHome();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(cu1).setVisible(true);
+    }//GEN-LAST:event_CHomeMouseClicked
+
+    private void COrderInsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderInsMouseClicked
+        // TODO add your handling code here:
+        OrderInstruments cu2 = new OrderInstruments();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(cu2).setVisible(true);
+    }//GEN-LAST:event_COrderInsMouseClicked
+
+    private void COrderAccMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderAccMouseClicked
+        // TODO add your handling code here:
+        OrderAccersories cu3 = new OrderAccersories();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(cu3).setVisible(true);
+    }//GEN-LAST:event_COrderAccMouseClicked
+
+    private void CReqRepairJobMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CReqRepairJobMouseClicked
+        // TODO add your handling code here:
+        RequestRepairJob cu4 = new RequestRepairJob();
+        jDesktopPanel.removeAll();
+        jDesktopPanel.add(cu4).setVisible(true);
+    }//GEN-LAST:event_CReqRepairJobMouseClicked
+
+    private void CHomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CHomeMouseEntered
+        // TODO add your handling code here:
+        CHome.setBackground(HoverColor);
+    }//GEN-LAST:event_CHomeMouseEntered
+
+    private void COrderInsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderInsMouseEntered
+        // TODO add your handling code here:
+        COrderIns.setBackground(HoverColor);
+    }//GEN-LAST:event_COrderInsMouseEntered
+
+    private void COrderAccMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderAccMouseEntered
+        // TODO add your handling code here:
+        COrderAcc.setBackground(HoverColor);
+    }//GEN-LAST:event_COrderAccMouseEntered
+
+    private void CReqRepairJobMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CReqRepairJobMouseEntered
+        // TODO add your handling code here:
+        CReqRepairJob.setBackground(HoverColor);
+    }//GEN-LAST:event_CReqRepairJobMouseEntered
+
+    private void CHomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CHomeMouseExited
+        // TODO add your handling code here:
+        CHome.setBackground(DefaultColor);
+    }//GEN-LAST:event_CHomeMouseExited
+
+    private void COrderInsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderInsMouseExited
+        // TODO add your handling code here:
+        COrderIns.setBackground(DefaultColor);
+    }//GEN-LAST:event_COrderInsMouseExited
+
+    private void COrderAccMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderAccMouseExited
+        // TODO add your handling code here:
+        COrderAcc.setBackground(DefaultColor);
+    }//GEN-LAST:event_COrderAccMouseExited
+
+    private void CReqRepairJobMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CReqRepairJobMouseExited
+        // TODO add your handling code here:
+        CReqRepairJob.setBackground(DefaultColor);
+    }//GEN-LAST:event_CReqRepairJobMouseExited
 
     /**
      * @param args the command line arguments
@@ -287,21 +420,21 @@ public class DBCustomerUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CHome;
+    private javax.swing.JPanel COrderAcc;
+    private javax.swing.JPanel COrderIns;
+    private javax.swing.JPanel CReqRepairJob;
+    private javax.swing.JLabel MenuName;
+    private javax.swing.JLabel MusicMartTxt;
+    private javax.swing.JPanel StatusBar;
+    private javax.swing.JPanel jDesktopPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel9;
     // End of variables declaration//GEN-END:variables
 }
