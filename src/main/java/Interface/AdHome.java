@@ -11,16 +11,18 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  *
  * @author briananjune
  */
-public class OrderInstruments extends javax.swing.JInternalFrame {
+public class AdHome extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form OrderInstruments
+     * Creates new form AdHome
      */
-    public OrderInstruments() {
+    public AdHome() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI tick = (BasicInternalFrameUI) this.getUI();
         tick.setNorthPane(null);
+        
+        
     }
 
     /**
@@ -34,21 +36,19 @@ public class OrderInstruments extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
         setBorder(null);
-        setPreferredSize(new java.awt.Dimension(702, 434));
 
-        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 738, Short.MAX_VALUE)
+            .addGap(0, 702, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
+            .addGap(0, 434, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
