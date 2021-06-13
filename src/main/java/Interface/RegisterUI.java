@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
  *
  * @author briananjune
  */
-public class Register extends javax.swing.JFrame {
+public class RegisterUI extends javax.swing.JFrame {
 
     private static Connection dbC;
     PreparedStatement st;
@@ -31,7 +31,7 @@ public class Register extends javax.swing.JFrame {
     /**
      * Creates new form Register
      */
-    public Register() {
+    public RegisterUI() {
         initComponents();
         setLocationRelativeTo(null);
         dbC = Database.Connect();
@@ -62,7 +62,7 @@ public class Register extends javax.swing.JFrame {
             
             
         } catch (SQLException ex) {
-            Logger.getLogger(Register.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RegisterUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     /**
@@ -91,6 +91,8 @@ public class Register extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel1.setText("Name");
 
@@ -238,7 +240,7 @@ public class Register extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane,"Username " + Username + " has been registered.");
                 Username.setText("");
                 Password.setText("");
-                Login ne = new Login();
+                LoginUI ne = new LoginUI();
                 this.setVisible(false);
                 ne.setVisible(true);
             }else
@@ -248,7 +250,7 @@ public class Register extends javax.swing.JFrame {
             
         } catch (SQLException ex) {
             this.setVisible(false);
-            Login ne = new Login();
+            LoginUI ne = new LoginUI();
             ne.setVisible(true);
         }
         
@@ -272,20 +274,21 @@ public class Register extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegisterUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Register().setVisible(true);
+                new RegisterUI().setVisible(true);
             }
         });
     }
