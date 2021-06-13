@@ -283,10 +283,19 @@ public class ADBAdminUI extends javax.swing.JFrame {
 
         ADesktop.setBackground(new java.awt.Color(204, 204, 204));
         ADesktop.setPreferredSize(new java.awt.Dimension(650, 440));
-        ADesktop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Images\\xfn1X.jpg")); // NOI18N
-        ADesktop.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 440));
+
+        javax.swing.GroupLayout ADesktopLayout = new javax.swing.GroupLayout(ADesktop);
+        ADesktop.setLayout(ADesktopLayout);
+        ADesktopLayout.setHorizontalGroup(
+            ADesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        ADesktopLayout.setVerticalGroup(
+            ADesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         getContentPane().add(ADesktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 100, 650, 440));
 
