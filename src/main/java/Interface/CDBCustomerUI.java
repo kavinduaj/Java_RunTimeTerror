@@ -56,6 +56,7 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         MusicMartTxt = new javax.swing.JLabel();
         MenuName = new javax.swing.JLabel();
         CDesktop = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -279,15 +280,27 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         CDesktop.setBackground(new java.awt.Color(204, 204, 204));
         CDesktop.setPreferredSize(new java.awt.Dimension(650, 440));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Images\\xfn1X.jpg")); // NOI18N
+
         javax.swing.GroupLayout CDesktopLayout = new javax.swing.GroupLayout(CDesktop);
         CDesktop.setLayout(CDesktopLayout);
         CDesktopLayout.setHorizontalGroup(
             CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
+            .addGroup(CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CDesktopLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         CDesktopLayout.setVerticalGroup(
             CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 440, Short.MAX_VALUE)
+            .addGroup(CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(CDesktopLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         getContentPane().add(CDesktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 650, 440));
@@ -480,6 +493,7 @@ public class CDBCustomerUI extends javax.swing.JFrame {
     private javax.swing.JLabel MenuName;
     private javax.swing.JLabel MusicMartTxt;
     private javax.swing.JPanel StatusBar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
