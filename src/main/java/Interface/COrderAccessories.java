@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Interface;
-import Model.Email;
+import static Interface.COrderInstruments.dbC;
 import Model.Database;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
@@ -12,9 +12,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.mail.MessagingException;
 import javax.swing.JOptionPane;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -24,18 +21,16 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author briananjune
  */
-public class COrderInstruments extends javax.swing.JInternalFrame {
+public class COrderAccessories extends javax.swing.JInternalFrame {
 
     public static Connection dbC;
     PreparedStatement st;
     PreparedStatement st1;
     PreparedStatement st2;
-    PreparedStatement st3;
     ResultSet rs;
     DefaultTableModel d;
-    String email;
     
-    public COrderInstruments() {
+    public COrderAccessories() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI tick = (BasicInternalFrameUI) this.getUI();
@@ -70,13 +65,13 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         try{
             String name = Ins.getText();
             
-            st = dbC.prepareStatement("Select * from Inventory where Id =?");
+            st = dbC.prepareStatement("Select * from Access where Id =?");
             st.setString(1, name);
             rs = st.executeQuery();
             
             if(rs.next()==false)
             {
-                JOptionPane.showMessageDialog(rootPane, "Instrument ID not found");
+                JOptionPane.showMessageDialog(rootPane, "Accessory ID not found");
                 Ins.setText("");
             }
             else{
@@ -126,7 +121,6 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         }
         Total.setText(String.valueOf(sum));
     }
-    
     private void OrderDetails()
     {
         try {
@@ -135,17 +129,18 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
             String total = Total.getText();
             String id = Ins.getText();
             
-            String querry = "Insert into OrderDetails (Name,Instrument,InsID,Total) values (?,?,?,?)";
+            String querry = "Insert into OrderDetailsA (Customer,AccId,Name,Total) values (?,?,?,?)";
             st2 = dbC.prepareStatement(querry, Statement.RETURN_GENERATED_KEYS);
             
             st2.setString(1, customer);
-            st2.setString(2, name);
-            st2.setString(3, id);
+            st2.setString(2, id);
+            st2.setString(3, name);
             st2.setString(4, total);
             
             st2.executeUpdate();
             rs = st2.getGeneratedKeys();
-                    
+                   
+            
             JOptionPane.showMessageDialog(rootPane, "Added Successfully");
             } catch (SQLException ex) {
             JOptionPane.showMessageDialog(rootPane, "Something's wrong");
@@ -153,23 +148,7 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         
     }
     
-    private String emailAssign ()
-    {
-        try {
-            String Querry= "Select Email from Login where name = ?";
-            st3 = dbC.prepareStatement(Querry);
-            st3.setString(1, Vendor.getSelectedItem().toString());
-            
-            rs = st3.executeQuery();
-            email = rs.getString("Email");
-            
-        return email;
-        
-        } catch (SQLException ex) {
-            Logger.getLogger(COrderInstruments.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
+    
     
     
     
@@ -214,7 +193,7 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Available Instruments");
+        jLabel1.setText("Available Accessories");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -226,9 +205,9 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel19.setText("Order Instruments");
+        jLabel19.setText("Order Accessories");
 
-        InsID.setText("Instrument ID");
+        InsID.setText("Accessory ID");
 
         Ins.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -290,7 +269,7 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(Total, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 49, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(Qty)
@@ -345,11 +324,11 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
         );
 
         pack();
@@ -373,14 +352,6 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
     private void AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddMouseClicked
         purchase();
         OrderDetails();
-        String e = emailAssign();
-        
-        try {
-            Email email = new Email();
-            email.EmailS(e);
-        } catch (MessagingException ex) {
-            Logger.getLogger(COrderInstruments.class.getName()).log(Level.SEVERE, null, ex);
-        }
         Ins.setText("");
         Name.setText("");
         Qty1.setText("");

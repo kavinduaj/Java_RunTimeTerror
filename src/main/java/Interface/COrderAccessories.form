@@ -171,7 +171,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Available Instruments"/>
+            <Property name="text" type="java.lang.String" value="Available Accessories"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -224,12 +224,12 @@
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel19">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Order Instruments"/>
+            <Property name="text" type="java.lang.String" value="Order Accessories"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="InsID">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Instrument ID"/>
+            <Property name="text" type="java.lang.String" value="Accessory ID"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="Ins">

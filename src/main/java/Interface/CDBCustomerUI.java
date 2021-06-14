@@ -82,7 +82,6 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\home (1).png")); // NOI18N
         jLabel6.setText("Home");
 
         javax.swing.GroupLayout CHomeLayout = new javax.swing.GroupLayout(CHome);
@@ -118,7 +117,6 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\shopping-search (1).png")); // NOI18N
         jLabel2.setText("Order Instruments");
 
         javax.swing.GroupLayout COrderInsLayout = new javax.swing.GroupLayout(COrderIns);
@@ -154,7 +152,6 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\feature-search (1).png")); // NOI18N
         jLabel3.setText("Order Accerssories");
 
         javax.swing.GroupLayout COrderAccLayout = new javax.swing.GroupLayout(COrderAcc);
@@ -190,7 +187,6 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\message-arrow-right (1).png")); // NOI18N
         jLabel4.setText("Request Repair Job");
 
         javax.swing.GroupLayout CRequestRJLayout = new javax.swing.GroupLayout(CRequestRJ);
@@ -209,8 +205,6 @@ public class CDBCustomerUI extends javax.swing.JFrame {
 
         CLogo.setPreferredSize(new java.awt.Dimension(171, 100));
         CLogo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\LOGO\\Logos\\LOGO_DashBoard.png")); // NOI18N
         CLogo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, 90));
 
         javax.swing.GroupLayout CMenuLayout = new javax.swing.GroupLayout(CMenu);
@@ -221,7 +215,7 @@ public class CDBCustomerUI extends javax.swing.JFrame {
             .addComponent(COrderAcc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(COrderIns, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(CRequestRJ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(CLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+            .addComponent(CLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
         );
         CMenuLayout.setVerticalGroup(
             CMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,7 +232,7 @@ public class CDBCustomerUI extends javax.swing.JFrame {
                 .addContainerGap(167, Short.MAX_VALUE))
         );
 
-        getContentPane().add(CMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 540));
+        getContentPane().add(CMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 540));
 
         StatusBar.setBackground(new java.awt.Color(0, 204, 204));
 
@@ -280,7 +274,7 @@ public class CDBCustomerUI extends javax.swing.JFrame {
         CDesktop.setBackground(new java.awt.Color(204, 204, 204));
         CDesktop.setPreferredSize(new java.awt.Dimension(650, 440));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Images\\xfn1X.jpg")); // NOI18N
+        jLabel1.setPreferredSize(new java.awt.Dimension(650, 440));
 
         javax.swing.GroupLayout CDesktopLayout = new javax.swing.GroupLayout(CDesktop);
         CDesktop.setLayout(CDesktopLayout);
@@ -288,19 +282,16 @@ public class CDBCustomerUI extends javax.swing.JFrame {
             CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 650, Short.MAX_VALUE)
             .addGroup(CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CDesktopLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CDesktopLayout.setVerticalGroup(
             CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 440, Short.MAX_VALUE)
+            .addGap(0, 452, Short.MAX_VALUE)
             .addGroup(CDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(CDesktopLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CDesktopLayout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap()))
         );
 
         getContentPane().add(CDesktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 650, 440));
@@ -324,7 +315,7 @@ public class CDBCustomerUI extends javax.swing.JFrame {
 
     private void COrderAccMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_COrderAccMouseClicked
         
-        COrderAccersories ac = new COrderAccersories();
+        COrderAccessories ac = new COrderAccessories();
         CDesktop.removeAll();
         CDesktop.add(ac).setVisible(true);
     }//GEN-LAST:event_COrderAccMouseClicked

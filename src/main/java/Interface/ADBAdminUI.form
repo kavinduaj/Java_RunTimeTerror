@@ -101,9 +101,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Edu. STORE\SLIIT\UOB Year 1\UOB Semester 2\2- Object Oriented Programming-JAVA (OOP)\Group Project\PROJECT\MusicMart_RunTimeTerror\src\main\java\Icons\home (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Home"/>
               </Properties>
             </Component>
@@ -143,9 +140,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Edu. STORE\SLIIT\UOB Year 1\UOB Semester 2\2- Object Oriented Programming-JAVA (OOP)\Group Project\PROJECT\MusicMart_RunTimeTerror\src\main\java\Icons\briefcase-search (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Assign Employees to Jobs"/>
               </Properties>
             </Component>
@@ -181,9 +175,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Edu. STORE\SLIIT\UOB Year 1\UOB Semester 2\2- Object Oriented Programming-JAVA (OOP)\Group Project\PROJECT\MusicMart_RunTimeTerror\src\main\java\Icons\forwardburger (1).png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Order from Suppliers"/>
               </Properties>
@@ -221,9 +212,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Edu. STORE\SLIIT\UOB Year 1\UOB Semester 2\2- Object Oriented Programming-JAVA (OOP)\Group Project\PROJECT\MusicMart_RunTimeTerror\src\main\java\Icons\chart-areaspline (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Generate Report"/>
               </Properties>
             </Component>
@@ -241,11 +229,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Edu. STORE\SLIIT\UOB Year 1\UOB Semester 2\2- Object Oriented Programming-JAVA (OOP)\Group Project\LOGO\Logos\LOGO_DashBoard.png"/>
-                </Property>
-              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="80" y="0" width="-1" height="90"/>
@@ -352,11 +335,14 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
+master
+
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="2" name="D:\Edu. STORE\SLIIT\UOB Year 1\UOB Semester 2\2- Object Oriented Programming-JAVA (OOP)\Group Project\PROJECT\MusicMart_RunTimeTerror\src\main\java\Images\xfn1X.jpg"/>
             </Property>
           </Properties>
+master
         </Component>
       </SubComponents>
     </Container>
