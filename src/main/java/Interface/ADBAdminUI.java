@@ -278,6 +278,11 @@ public class ADBAdminUI extends javax.swing.JFrame {
         ADesktop.setBackground(new java.awt.Color(204, 204, 204));
         ADesktop.setPreferredSize(new java.awt.Dimension(650, 440));
 
+master
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Images\\xfn1X.jpg")); // NOI18N
+
+master
         javax.swing.GroupLayout ADesktopLayout = new javax.swing.GroupLayout(ADesktop);
         ADesktop.setLayout(ADesktopLayout);
         ADesktopLayout.setHorizontalGroup(
