@@ -4,11 +4,17 @@
  * and open the template in the editor.
  */
 package Interface;
+import Model.Email;
 import Model.Database;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.mail.MessagingException;
 import javax.swing.JOptionPane;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -23,8 +29,11 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
     public static Connection dbC;
     PreparedStatement st;
     PreparedStatement st1;
+    PreparedStatement st2;
+    PreparedStatement st3;
     ResultSet rs;
     DefaultTableModel d;
+    String email;
     
     public COrderInstruments() {
         initComponents();
@@ -118,8 +127,49 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         Total.setText(String.valueOf(sum));
     }
     
+    private void OrderDetails()
+    {
+        try {
+            String customer  = (String) Vendor.getSelectedItem();
+            String name = Name.getText();
+            String total = Total.getText();
+            String id = Ins.getText();
+            
+            String querry = "Insert into OrderDetails (Name,Instrument,InsID,Total) values (?,?,?,?)";
+            st2 = dbC.prepareStatement(querry, Statement.RETURN_GENERATED_KEYS);
+            
+            st2.setString(1, customer);
+            st2.setString(2, name);
+            st2.setString(3, id);
+            st2.setString(4, total);
+            
+            st2.executeUpdate();
+            rs = st2.getGeneratedKeys();
+                    
+            JOptionPane.showMessageDialog(rootPane, "Added Successfully");
+            } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Something's wrong");
+        }
+        
+    }
     
-    
+    private String emailAssign ()
+    {
+        try {
+            String Querry= "Select Email from Login where name = ?";
+            st3 = dbC.prepareStatement(Querry);
+            st3.setString(1, Vendor.getSelectedItem().toString());
+            
+            rs = st3.executeQuery();
+            email = rs.getString("Email");
+            
+        return email;
+        
+        } catch (SQLException ex) {
+            Logger.getLogger(COrderInstruments.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
     
     
     
@@ -322,6 +372,15 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
 
     private void AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddMouseClicked
         purchase();
+        OrderDetails();
+        String e = emailAssign();
+        
+        try {
+            Email email = new Email();
+            email.EmailS(e);
+        } catch (MessagingException ex) {
+            Logger.getLogger(COrderInstruments.class.getName()).log(Level.SEVERE, null, ex);
+        }
         Ins.setText("");
         Name.setText("");
         Qty1.setText("");

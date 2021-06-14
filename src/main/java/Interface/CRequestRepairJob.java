@@ -4,6 +4,14 @@
  * and open the template in the editor.
  */
 package Interface;
+import Model.Database;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
@@ -13,16 +21,65 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class CRequestRepairJob extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form RequestJob
-     */
+    public Connection dbC;
+    PreparedStatement st;
+    
     public CRequestRepairJob() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI tick = (BasicInternalFrameUI) this.getUI();
         tick.setNorthPane(null);
+        
+        dbC = Database.Connect();
     }
 
+    private void Job()
+    {
+        try {
+            String job = jList2.getSelectedValue();
+            Boolean service1 = jCheckBox1.isSelected();
+            Boolean service2 = jCheckBox2.isSelected();
+            Boolean service3 = jCheckBox3.isSelected();
+            String s = "",t ="",p="";
+            String Other = jTextArea1.getText();
+            if (service1)
+            {
+                s="Service";
+            }   if (service2)
+            {
+                t="Technical";
+            }   if (service3)
+            {
+                p="Physical";
+            }   String querry = "Insert into Repair (Name,Service,Tech,Phys,Other) values (?,?,?,?,?)";
+            st = dbC.prepareStatement(querry, Statement.RETURN_GENERATED_KEYS);
+                    
+            st.setString(1, job);
+            st.setString(2, s);
+            st.setString(3, t);
+            st.setString(4, p);
+            st.setString(5, Other);
+            st.executeUpdate();
+            
+            JOptionPane.showMessageDialog(rootPane, "Requested Successfully");
+                    
+            } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Something's wrong");
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,13 +112,22 @@ public class CRequestRepairJob extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(650, 440));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\message-arrow-right (2).png")); // NOI18N
         jLabel2.setText("jLabel1");
         jLabel2.setPreferredSize(new java.awt.Dimension(36, 36));
 
         jPanel2.setPreferredSize(new java.awt.Dimension(618, 341));
 
         jButton1.setText("Cancel");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Piano", "Electric Piano", "Electric Keyboard", "Classical Guitar", "Electrical Guitar", "Accoustic Guitar", "Saxophone", "Flute", "Voiline", "Drum Set" };
@@ -93,6 +159,11 @@ public class CRequestRepairJob extends javax.swing.JInternalFrame {
         jLabel5.setText("Other Faults :");
 
         jButton2.setText("Request");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -183,7 +254,7 @@ public class CRequestRepairJob extends javax.swing.JInternalFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(133, 133, 133)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,18 +263,18 @@ public class CRequestRepairJob extends javax.swing.JInternalFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
         );
 
         pack();
@@ -216,6 +287,19 @@ public class CRequestRepairJob extends javax.swing.JInternalFrame {
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        Job();
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        
+        System.exit(0);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

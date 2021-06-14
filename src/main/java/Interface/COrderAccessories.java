@@ -4,11 +4,14 @@
  * and open the template in the editor.
  */
 package Interface;
+import static Interface.COrderInstruments.dbC;
 import Model.Database;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -23,6 +26,7 @@ public class COrderAccessories extends javax.swing.JInternalFrame {
     public static Connection dbC;
     PreparedStatement st;
     PreparedStatement st1;
+    PreparedStatement st2;
     ResultSet rs;
     DefaultTableModel d;
     
@@ -117,7 +121,32 @@ public class COrderAccessories extends javax.swing.JInternalFrame {
         }
         Total.setText(String.valueOf(sum));
     }
-    
+    private void OrderDetails()
+    {
+        try {
+            String customer  = (String) Vendor.getSelectedItem();
+            String name = Name.getText();
+            String total = Total.getText();
+            String id = Ins.getText();
+            
+            String querry = "Insert into OrderDetailsA (Customer,AccId,Name,Total) values (?,?,?,?)";
+            st2 = dbC.prepareStatement(querry, Statement.RETURN_GENERATED_KEYS);
+            
+            st2.setString(1, customer);
+            st2.setString(2, id);
+            st2.setString(3, name);
+            st2.setString(4, total);
+            
+            st2.executeUpdate();
+            rs = st2.getGeneratedKeys();
+                   
+            
+            JOptionPane.showMessageDialog(rootPane, "Added Successfully");
+            } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(rootPane, "Something's wrong");
+        }
+        
+    }
     
     
     
@@ -322,6 +351,7 @@ public class COrderAccessories extends javax.swing.JInternalFrame {
 
     private void AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddMouseClicked
         purchase();
+        OrderDetails();
         Ins.setText("");
         Name.setText("");
         Qty1.setText("");
