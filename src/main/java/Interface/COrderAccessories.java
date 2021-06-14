@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author briananjune
  */
-public class COrderInstruments extends javax.swing.JInternalFrame {
+public class COrderAccessories extends javax.swing.JInternalFrame {
 
     public static Connection dbC;
     PreparedStatement st;
@@ -26,7 +26,7 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
     ResultSet rs;
     DefaultTableModel d;
     
-    public COrderInstruments() {
+    public COrderAccessories() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI tick = (BasicInternalFrameUI) this.getUI();
@@ -61,13 +61,13 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         try{
             String name = Ins.getText();
             
-            st = dbC.prepareStatement("Select * from Inventory where Id =?");
+            st = dbC.prepareStatement("Select * from Access where Id =?");
             st.setString(1, name);
             rs = st.executeQuery();
             
             if(rs.next()==false)
             {
-                JOptionPane.showMessageDialog(rootPane, "Instrument ID not found");
+                JOptionPane.showMessageDialog(rootPane, "Accessory ID not found");
                 Ins.setText("");
             }
             else{
@@ -164,7 +164,7 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Available Instruments");
+        jLabel1.setText("Available Accessories");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -176,9 +176,9 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel19.setText("Order Instruments");
+        jLabel19.setText("Order Accessories");
 
-        InsID.setText("Instrument ID");
+        InsID.setText("Accessory ID");
 
         Ins.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -240,7 +240,7 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(Total, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 49, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(Qty)
@@ -295,11 +295,11 @@ public class COrderInstruments extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
         );
 
         pack();

@@ -84,7 +84,6 @@ public class ADBAdminUI extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\home (1).png")); // NOI18N
         jLabel6.setText("Home");
 
         javax.swing.GroupLayout AHomeLayout = new javax.swing.GroupLayout(AHome);
@@ -120,7 +119,6 @@ public class ADBAdminUI extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\briefcase-search (1).png")); // NOI18N
         jLabel2.setText("Assign Employees to Jobs");
 
         javax.swing.GroupLayout AAssignEmpLayout = new javax.swing.GroupLayout(AAssignEmp);
@@ -158,7 +156,6 @@ public class ADBAdminUI extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\forwardburger (1).png")); // NOI18N
         jLabel3.setText("Order from Suppliers");
 
         javax.swing.GroupLayout AOrderSupLayout = new javax.swing.GroupLayout(AOrderSup);
@@ -194,7 +191,6 @@ public class ADBAdminUI extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Icons\\chart-areaspline (1).png")); // NOI18N
         jLabel4.setText("Generate Report");
 
         javax.swing.GroupLayout AGenerateRLayout = new javax.swing.GroupLayout(AGenerateR);
@@ -213,8 +209,6 @@ public class ADBAdminUI extends javax.swing.JFrame {
 
         Logo.setPreferredSize(new java.awt.Dimension(171, 100));
         Logo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\LOGO\\Logos\\LOGO_DashBoard.png")); // NOI18N
         Logo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, 90));
 
         javax.swing.GroupLayout AMenuLayout = new javax.swing.GroupLayout(AMenu);
@@ -283,10 +277,17 @@ public class ADBAdminUI extends javax.swing.JFrame {
 
         ADesktop.setBackground(new java.awt.Color(204, 204, 204));
         ADesktop.setPreferredSize(new java.awt.Dimension(650, 440));
-        ADesktop.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Edu. STORE\\SLIIT\\UOB Year 1\\UOB Semester 2\\2- Object Oriented Programming-JAVA (OOP)\\Group Project\\PROJECT\\MusicMart_RunTimeTerror\\src\\main\\java\\Images\\xfn1X.jpg")); // NOI18N
-        ADesktop.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 440));
+        javax.swing.GroupLayout ADesktopLayout = new javax.swing.GroupLayout(ADesktop);
+        ADesktop.setLayout(ADesktopLayout);
+        ADesktopLayout.setHorizontalGroup(
+            ADesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        ADesktopLayout.setVerticalGroup(
+            ADesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         getContentPane().add(ADesktop, new org.netbeans.lib.awtextra.AbsoluteConstraints(251, 100, 650, 440));
 
